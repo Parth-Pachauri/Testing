@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office Appointment Scheduling</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://source.unsplash.com/random') no-repeat center center fixed;
+      background-size: cover;
+      animation: background-slide 20s linear infinite;
+    }
+    @keyframes background-slide {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+    .header {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8); /* Change the header background color here */
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .header h1 {
+      color: #007bff;
+      margin: 0;
+      font-size: 32px;
+    }
+    .header p {
+      color: #333;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .header a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 500px;
+      margin: 110px auto 30px; /* Adjust the margin to avoid overlap */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      background-color: rgba(255, 255, 255, 0.8); /* Change the container background color here */
+    }
+    h2 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    input[type="text"], input[type="email"], input[type="datetime-local"], select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, input[type="datetime-local"]:focus, select:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .confirmation {
+      margin-top: 20px;
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>XYZ Office</h1>
+    <p>About Us: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros id ante varius vestibulum at id justo. Nulla rutrum quam sed risus tristique, ut pharetra arcu commodo. <a href="#">Learn more</a></p>
+  </div>
+  <div class="container">
+    <h2>Office Appointment Scheduling</h2>
+    <form action="/sign_up" id="appointmentForm" method="post" >
+      <div>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div>
+        <label for="bearer">Office Bearer:</label>
+        <select id="bearer" name="bearer">
+          <option value="John Doe">John Doe</option>
+          <option value="Jane Smith">Jane Smith</option>
+          <option value="Michael Johnson">Michael Johnson</option>
+          <option value="Emily Brown">Emily Brown</option>
+        </select>
+      </div>
+      <div>
+        <label for="dateTime">Preferred Date & Time:</label>
+        <input type="datetime-local" id="dateTime" name="dateTime" required>
+      </div>
+      <button type="submit">Schedule Appointment</button>
+    </form>
+    <div class="confirmation" id="confirmation"></div>
+  </div>
+</body>
+</html>
